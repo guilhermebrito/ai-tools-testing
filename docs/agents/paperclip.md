@@ -15,3 +15,7 @@ Paperclip é uma plataforma open-source de orquestração UI-driven para agentes
 ## Casos de Uso
 - Operar uma empresa orientada por IA, onde você tem múltiplos agentes assumindo papéis de marketing, pesquisa, QA e desenvolvimento em paralelo.
 - Automação de tarefas longas de infraestrutura que demoram dias para concluir.
+
+## Links Úteis
+- **Site Oficial:** [https://paperclip.dev/](https://paperclip.dev/)
+- **Repositório Oficial (GitHub):** [https://github.com/paperclip-dev/paperclip](https://github.com/paperclip-dev/paperclip)

@@ -15,3 +15,6 @@ Pi é um toolkit open-source voltado para a criação e interação com agentes 
 ## Casos de Uso
 - Equipes que desejam hospedar seus próprios pods de LLM (vLLM) e integrá-los aos seus fluxos de CI/CD.
 - Criação de bots de desenvolvimento internos para Slack/Discord.
+
+## Links Úteis
+- **Repositório Oficial (GitHub):** [https://github.com/earendil-works/pi](https://github.com/earendil-works/pi)

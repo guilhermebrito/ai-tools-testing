@@ -17,3 +17,7 @@ A IA retorna o comando exato (ex: `find . -name "*.ts" -mtime -1 -exec ls -lh {}
 - Administração de sistemas locais ou remotos via SSH.
 - Manipulação e tratamento rápido de arquivos (logs, CSVs).
 - Operações de Git complexas (rebases, cherry-picks).
+
+## Links Úteis
+- **GitHub Copilot CLI:** [https://docs.github.com/en/copilot/github-copilot-in-the-cli](https://docs.github.com/en/copilot/github-copilot-in-the-cli)
+- **OpenAI Codex:** [https://openai.com/index/openai-codex/](https://openai.com/index/openai-codex/)

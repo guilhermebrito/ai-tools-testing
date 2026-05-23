@@ -16,3 +16,7 @@ Desenvolvido pela Nous Research, Hermes é um agente de Inteligência Artificial
 - Assistente pessoal permanente rodando em uma VPS privada ou máquina local.
 - Automação de CI/CD não-padrão.
 - Delegação de tarefas complexas e longas a partir de dispositivos móveis via chat (Telegram/WhatsApp).
+
+## Links Úteis
+- **Nous Research:** [https://nousresearch.com/](https://nousresearch.com/)
+- **Repositório Oficial (GitHub):** [https://github.com/NousResearch/Hermes](https://github.com/NousResearch/Hermes)

@@ -18,3 +18,6 @@ O BMAD combate o "vibe coding" (programar por tentativa e erro com prompts não 
 - Construção de plataformas SaaS do zero.
 - Equipes que desejam padronizar o uso de IA entre seus desenvolvedores.
 - Refatorações de sistemas onde a regra de negócio não pode ser perdida.
+
+## Links Úteis
+- **Site Oficial:** [https://www.bmad.dev/](https://www.bmad.dev/)

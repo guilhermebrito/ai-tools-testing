@@ -18,3 +18,7 @@ Diferente de editores de código tradicionais, o Claude Code vive diretamente no
 - Auditoria e refatoração de projetos legados.
 - Análise de erros de build diretamente pelo log do terminal.
 - Criação rápida de boilerplates e scripts sem sair do ambiente CLI.
+
+## Links Úteis
+- **Site Oficial:** [https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
+- **Repositório (NPM):** [https://www.npmjs.com/package/@anthropic-ai/claude-code](https://www.npmjs.com/package/@anthropic-ai/claude-code)

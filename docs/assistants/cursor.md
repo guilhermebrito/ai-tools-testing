@@ -16,3 +16,7 @@ Cursor é atualmente a IDE AI-first mais popular do mercado. Construída como um
 - Pair programming contínuo e desenvolvimento diário.
 - Criação de novas funcionalidades com assistência linha a linha.
 - Descoberta e entendimento rápido de código desconhecido através do Chat lateral.
+
+## Links Úteis
+- **Site Oficial:** [https://cursor.com/](https://cursor.com/)
+- **Documentação:** [https://docs.cursor.com/](https://docs.cursor.com/)

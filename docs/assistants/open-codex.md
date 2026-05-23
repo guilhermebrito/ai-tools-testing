@@ -16,3 +16,6 @@ O [Open Codex](https://github.com/ymichael/open-codex) é um agente de codifica�
 ## Casos de Uso
 - Desenvolvedores de terminal que buscam a experiência do *Claude Code*, mas usando modelos gratuitos locais (Ollama) ou OpenRouter.
 - Automação segura de tarefas em pipelines CI/CD.
+
+## Links Úteis
+- **Repositório Oficial (GitHub):** [https://github.com/ymichael/open-codex](https://github.com/ymichael/open-codex)

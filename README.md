@@ -28,6 +28,7 @@ Sistemas com maior autonomia, capazes de gerenciar múltiplas tarefas e manter e
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | [Paperclip](./docs/agents/paperclip.md) | Plataforma UI para orquestrar "times" de agentes. | ✅ | ✅ | ✅ | ✅ | ✅ (OSS) |
 | [Hermes](./docs/agents/hermes.md) | Agente persistente focado em devs ("Skills"). | ✅ | ✅ | ✅ | ✅ | ✅ (OSS) |
+| [OpenHands](./docs/agents/openhands.md) | IA Engenheira de Software Open-Source autônoma. | ✅ | ✅ | ✅ | ✅ | ✅ (OSS) |
 
 ### 3. Métodos e Toolkits
 Estruturas de trabalho, metodologias e APIs para organizar o uso de IAs.
@@ -36,6 +37,7 @@ Estruturas de trabalho, metodologias e APIs para organizar o uso de IAs.
 | :--- | :--- | :---: | :--- |
 | [BMAD](./docs/methods/bmad.md) | Metodologia Agile AI-Driven. | ✅ Sim | Estruturação de papéis e redução de alucinações. |
 | [Pi](./docs/methods/pi.md) | Toolkit CLI e API para criação de agentes. | ✅ Sim | Construção de agentes customizados. |
+| [CrewAI](./docs/methods/crewai.md) | Framework para orquestrar times de agentes de IA. | ✅ Sim | Automação multi-agente e colaboração baseada em papéis. |
 
 ---
 
