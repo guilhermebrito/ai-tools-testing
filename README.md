@@ -7,6 +7,7 @@ Este repositório documenta a avaliação de diversas ferramentas, métodos e ag
 - `docs/assistants/`: Ferramentas focadas em pair programming, edição de código e interfaces CLI.
 - `docs/methods/`: Frameworks e metodologias para estruturar o trabalho com IAs.
 - `docs/agents/`: Agentes autônomos e orquestradores que operam com maior independência.
+- `docs/analytics/`: Ferramentas de observabilidade, telemetria e análise de uso de IA.
 
 ## Avaliação de Ferramentas por Categoria
 
@@ -40,6 +41,13 @@ Estruturas de trabalho, metodologias e APIs para organizar o uso de IAs.
 | [Pi](./docs/methods/pi.md) | Toolkit CLI com TUI rica (Earendil Works). | ✅ Sim | Construção de agentes customizados com extensões e hooks. |
 | [CrewAI](./docs/methods/crewai.md) | Framework Crews + Flows com AMP enterprise. | ✅ Sim | Automação multi-agente, Flows event-driven e governança. |
 
+### 4. Analytics e Observabilidade
+Ferramentas focadas em monitorar, analisar e melhorar o uso de assistentes de IA e engenharia agentic.
+
+| Ferramenta | Descrição Principal | Local/Privado | Extensão IDE | Foco / Caso de Uso |
+| :--- | :--- | :---: | :---: | :--- |
+| [AI Engineer Coach](./docs/analytics/ai-engineering-coach.md) | Extensão VS Code para análise de logs de assistentes de IA. | ✅ Sim | ✅ (VS Code) | Melhoria contínua, detecção de anti-padrões e métricas agentic. |
+
 ---
 
 ## Mudanças e Evoluções das Ferramentas (2025–2026)
@@ -59,6 +67,7 @@ A tabela abaixo resume as principais evoluções que cada ferramenta passou desd
 | **BMAD** | Metodologia de papéis + Markdown | Framework v6.x com 3 camadas (Core/Method/Builder) | Scale-adaptive intelligence, cross-platform (Cursor/Claude/Antigravity), BMad Builder |
 | **Pi** | Toolkit CLI `@mariozechner` | Pi v0.74+ sob `@earendil-works` | Migração de namespace, OpenRouter routing, image generation, Together AI, hooks avançados |
 | **CrewAI** | Framework Python para Crews | Plataforma enterprise com Crews + Flows + AMP | Flows event-driven, AMP (Control Plane, RBAC, tracing), MCP, A2A communication |
+| **AI Engineer Coach** | - | Lançamento open-source | Ferramenta de observabilidade local para VS Code com detecção de 45+ anti-padrões e métricas agentic. |
 
 ---
 
