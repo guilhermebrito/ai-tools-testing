@@ -1,56 +1,29 @@
-# Pi (Earendil Works)
-
-> [!NOTE]
-> O Pi migrou do escopo `@mariozechner` para `@earendil-works`, mas continua sendo um toolkit CLI open-source altamente hackável para criação de agentes de IA com TUI rica e suporte multi-provedor.
+# Pi (earendil-works/pi/coding-agent)
 
 ## Visão Geral
-O **Pi** é um toolkit open-source mantido pela **Earendil Works** (anteriormente sob o namespace `@mariozechner`), voltado para a criação e interação com agentes de IA diretamente no terminal. O módulo `coding-agent` fornece uma interface TUI (Terminal User Interface) rica e uma API unificada para múltiplos provedores de modelos de linguagem.
+O Toolkit Pi (com ênfase no seu módulo `coding-agent`) atua como uma solução open-source e robusta de fundação, focada em empoderar desenvolvedores a montar, customizar e implantar seus próprios bots ou interfaces CLI conversacionais voltadas para uso corporativo interno e desenvolvimento pesado.
 
----
+## Principais Funcionalidades / Como Funciona
+- **Interface Rica no Terminal (TUI):** Traz uma experiência quase gráfica para dentro da CLI bruta. É capaz de desenhar menus selecionáveis visualmente atraentes e barras interativas utilizando os recursos modernos do emulador de terminal.
+- **API Unificada de IA:** Abstrai fortemente os percalços ao trocar os conectores LLM da OpenAI, Google ou hospedeiros locais como vLLM. O código do seu Agente se mantém igual independentemente do cérebro acoplado.
+- **Integração de Bots Externos (ChatOps):** Oferece utilitários de suporte de primeira classe para Slack e Discord bots, conectando os LLMs locais aos canais da equipe de forma contínua.
 
-## Funcionalidades Principais (2026 — v0.74.0+)
+## Pontos Fortes e Limitações
+### Pontos Fortes
+- **Aceleração para Builders (Hackability):** Extremamente maleável. Se você não gosta do Cursor e quer fazer sua própria plataforma central de Inteligência Artificial usando sua cloud fechada, este toolkit diminui o atrito sensivelmente.
+- **Conectividade de Ecossistemas Híbridos:** É otimizado para lidar muito bem com contêineres locais rodando Modelos Menores ou *LLMs Open-Weights* corporativas fechadas em LGPD.
 
-### Interface TUI (Terminal User Interface)
-*   **Startup Header Interativo:** Resumo compacto dos agentes, templates e extensões carregados, com detalhes expandíveis via `Ctrl+O`.
-*   **Working Indicators Configuráveis:** Extensões podem mostrar estados de trabalho animados, estáticos ou ocultos via `ctx.ui.setWorkingIndicator()`.
-*   **Hyperlinks OSC 8:** Links em Markdown na saída do assistente renderizam como hyperlinks clicáveis em terminais compatíveis.
-
-### Provedores e Modelos
-*   **API Unificada:** Abstrai a complexidade de conexão com diferentes provedores: **OpenAI**, **Anthropic**, **Ollama**, **vLLM**, **Together AI** e **OpenRouter**.
-*   **Geração de Imagens:** Suporte a APIs de geração de imagens, incluindo geração via OpenRouter.
-*   **Roteamento OpenRouter:** Suporte completo a `models.json` com fallbacks, parâmetros de roteamento e restrições de custo/latência.
-
-### Extensibilidade
-*   **Hooks (`after_provider_response`):** Permitem que extensões inspecionem status HTTP e headers antes do consumo da stream.
-*   **Prompt Templates com `argument-hint`:** Frontmatter aprimorado que fornece sugestões de autocomplete para templates de prompt.
-*   **Sessões e Branching:** Comando `/clone` para duplicar a branch ativa em uma nova sessão, com APIs de extensão para lidar com forks.
-
-### Integrações
-*   **Slack Bots:** Suporte integrado para bots no Slack, facilitando o uso colaborativo do agente em times.
-*   **Plataformas:** Suporte nativo para macOS, Linux e **Windows ARM64** (com artefatos standalone).
-
----
-
-## Pontos Fortes
-*   **Hackabilidade Extrema:** O toolkit mais customizável para desenvolvedores que querem construir sua própria plataforma de agentes.
-*   **Foco em CLI:** Ferramentas de produtividade de terminal sem dependência de serviços web proprietários.
-*   **Open Source (MIT):** Core MIT-licensed com planos para tiers comerciais futuros.
-
----
+### Limitações
+- Não é um "Assistente AI" de prateleira para meramente baixar e começar a codar magicamente no seu código pessoal como as IDEs da moda. Requer visão arquitetural de implantação.
 
 ## Casos de Uso
-*   Equipes que hospedam seus próprios pods de LLM (vLLM) e integram aos fluxos de CI/CD.
-*   Criação de bots de desenvolvimento internos para Slack/Discord.
-*   Desenvolvedores que desejam máximo controle sobre o runtime e a configuração de agentes.
+- Criação e montagem do chat de suporte e revisão de código proprietário no servidor "on-premise" interno do seu cliente (via conexões isoladas e modelos locais privados).
+- Implantação rápida de um Bot central no Slack da Engenharia respondendo *Queries* lendo do repositório *core*.
 
----
-
-## Migração de Namespace
-> [!IMPORTANT]
-> Os pacotes antigos sob `@mariozechner` foram deprecados. Novos installs devem usar o escopo `@earendil-works` (ex: `@earendil-works/pi-coding-agent`). Atualizações podem ser feitas via `pi update --self`.
-
----
+## Status, Preço e Licenciamento
+- **Modelo:** Open-Source.
+- **Preço:** Totalmente gratuito.
+- **Agnóstico de Provedor:** Sim.
 
 ## Links Úteis
-*   **Site Oficial:** [https://pi.dev/](https://pi.dev/)
-*   **Repositório Oficial (GitHub):** [https://github.com/earendil-works/pi](https://github.com/earendil-works/pi)
+- **Repositório Oficial (GitHub):** [https://github.com/earendil-works/pi](https://github.com/earendil-works/pi)

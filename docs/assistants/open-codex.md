@@ -1,41 +1,32 @@
 # Open Codex
 
-> [!NOTE]
-> O Open Codex é um **fork comunitário leve** do Codex CLI oficial da OpenAI, focado em **agnósticismo de provedor** e execução local segura. Não deve ser confundido com a plataforma oficial OpenAI Codex.
-
 ## Visão Geral
-O [Open Codex](https://github.com/ymichael/open-codex) é um agente de codificação open-source e leve que roda no terminal. Criado como um *fork* modificado da ferramenta original de CLI da OpenAI, ele foi adaptado para suportar o ecossistema moderno e diversificado de provedores de Inteligência Artificial, permitindo que desenvolvedores usem modelos gratuitos, locais ou de terceiros como alternativa às APIs proprietárias.
+O Open Codex é um agente de codificação open-source focado inteiramente na interface de linha de comando. Ele surgiu como um *fork* turbinado das antigas ferramentas de CLI, atualizado para operar de forma totalmente independente e suportar o ecossistema moderno de provedores de IA.
 
----
+## Principais Funcionalidades / Como Funciona
+- **CLI Interativa e Autônoma:** Executável direto do terminal (`open-codex`). Inclui um modo "Full Auto", onde ele mesmo identifica o erro e roda as modificações iterativamente.
+- **Prompting Modular via Arquivos:** Lê diretrizes de design e padrões de código através da detecção automática de arquivos `codex.md` no projeto e `~/.codex/instructions.md` no sistema global.
+- **Interoperabilidade Total de APIs:** Usa a padronização do *Chat Completions*, aceitando requisições do OpenAI, Anthropic, Google, OpenRouter e Ollama perfeitamente.
 
-## Como Funciona
+## Pontos Fortes e Limitações
+### Pontos Fortes
+- **Totalmente Agnóstico e Sem Custos Inerentes:** O desenvolvedor não fica preso a um provedor; usar modelos abertos (Llama, DeepSeek) localmente corta custos a zero.
+- **Design Voltado a CI/CD:** O modo não-interativo da ferramenta permite uso trivial em *pipelines* automatizadas (GitHub Actions, GitLab CI).
+- **Isolamento de Segurança:** Pode rodar comandos locais bloqueando tráfego de rede e uso indevido de diretórios host (usando Docker / Seatbelt).
 
-*   **Instalação:** Via npm (`npm i -g open-codex`), funciona recebendo comandos diretos ou rodando no modo "Full Auto", onde itera no código por conta própria.
-*   **Chat Completions API:** Comunica-se usando a API padrão de Chat Completions, o que permite substituir o endpoint da OpenAI por qualquer provedor compatível.
-*   **Arquivos de Contexto:** Assimila contexto lendo arquivos globais (`~/.codex/instructions.md`) e locais do projeto (`codex.md`).
-
----
-
-## Pontos Fortes
-
-*   **Agnóstico de Provedor:** Funciona nativamente com **OpenAI**, **Google Gemini**, **OpenRouter** e ferramentas locais como **Ollama** — ideal para quem busca a experiência do Claude Code ou Codex sem depender de APIs pagas.
-*   **Foco em Segurança (Sandboxing):** Roda comandos localmente bloqueando tráfego de rede e isolando diretórios (usando *Apple Seatbelt* no macOS e *Docker* no Linux).
-*   **Integração Contínua (CI):** Possui modo *Non-interactive* (`-q`), sendo excelente para rodar em pipelines como GitHub Actions para gerar changelogs ou aplicar correções triviais automaticamente.
-*   **Leveza:** Foco em ser uma alternativa leve e modular, sem a complexidade de plataformas enterprise.
-
----
-
-## Status e Posicionamento
-O Open Codex é mantido pela comunidade e não possui o mesmo ciclo de releases agressivo de ferramentas comerciais. Ele permanece como uma alternativa prática para desenvolvedores que priorizam **controle local**, **privacidade** e **custo zero** (via Ollama ou modelos locais).
-
----
+### Limitações
+- Modelos locais leves (Ollama) nem sempre alcançam o desempenho de codificação *zero-shot* exigido por algumas tarefas complexas.
+- Ausência de interface gráfica (GUI), exigindo desenvoltura no terminal.
 
 ## Casos de Uso
-*   Desenvolvedores de terminal que buscam uma experiência agentic usando modelos gratuitos locais (Ollama) ou via OpenRouter.
-*   Automação segura de tarefas em pipelines CI/CD com modo não-interativo.
-*   Prototipagem e scripts rápidos sem custos de API.
+- Desenvolvedores *budget-conscious* ou estudantes usando modelos gratuitos na sua máquina local via Ollama.
+- Integração em automações e fluxos de Integração Contínua (geração de logs, correção de indentação, *lint fixes* automatizados).
+- Sandboxing seguro para execução de códigos suspeitos ou experimentais.
 
----
+## Status, Preço e Licenciamento
+- **Modelo:** Open-Source (Licença MIT).
+- **Preço:** Totalmente gratuito, com os custos limitados apenas às requisições da própria API de IA escolhida pelo usuário.
+- **Agnóstico de Provedor:** Sim (100% Flexível).
 
 ## Links Úteis
-*   **Repositório Oficial (GitHub):** [https://github.com/ymichael/open-codex](https://github.com/ymichael/open-codex)
+- **Repositório Oficial (GitHub):** [https://github.com/ymichael/open-codex](https://github.com/ymichael/open-codex)
