@@ -40,6 +40,7 @@ Estruturas de trabalho, metodologias e APIs para organizar o uso de IAs.
 | [BMAD](./docs/methods/bmad.md) | Metodologia Agile AI-Driven (v6.x com BMB). | ✅ Sim | Estruturação de papéis, documentação e redução de alucinações. |
 | [Pi](./docs/methods/pi.md) | Toolkit CLI com TUI rica (Earendil Works). | ✅ Sim | Construção de agentes customizados com extensões e hooks. |
 | [CrewAI](./docs/methods/crewai.md) | Framework Crews + Flows com AMP enterprise. | ✅ Sim | Automação multi-agente, Flows event-driven e governança. |
+| [Traycer AI](./docs/methods/traycer.md) | Camada de orquestração spec-first para agentes. | ✅ Sim | Planejamento estruturado, handoff e verificação de código. |
 
 ### 4. Analytics e Observabilidade
 Ferramentas focadas em monitorar, analisar e melhorar o uso de assistentes de IA e engenharia agentic.
@@ -68,6 +69,7 @@ A tabela abaixo resume as principais evoluções que cada ferramenta passou desd
 | **Pi** | Toolkit CLI `@mariozechner` | Pi v0.74+ sob `@earendil-works` | Migração de namespace, OpenRouter routing, image generation, Together AI, hooks avançados |
 | **CrewAI** | Framework Python para Crews | Plataforma enterprise com Crews + Flows + AMP | Flows event-driven, AMP (Control Plane, RBAC, tracing), MCP, A2A communication |
 | **AI Engineer Coach** | - | Lançamento open-source | Ferramenta de observabilidade local para VS Code com detecção de 45+ anti-padrões e métricas agentic. |
+| **Traycer AI** | - | Lançamento recente | Plataforma spec-first que atua como orquestrador e verificador entre o desenvolvedor e agentes de IA. |
 
 ---
 
