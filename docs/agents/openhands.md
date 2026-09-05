@@ -1,32 +1,47 @@
 # OpenHands
 
-## Visão Geral
-OpenHands (anteriormente denominado OpenDevin) é uma iniciativa open-source muito ativa focada na construção de um Engenheiro de Software de IA completamente autônomo. Ele substitui a intervenção humana atuando como um desenvolvedor individual, englobando a descoberta, o planejamento, e o conserto ponta-a-ponta de grandes trechos de software.
+> [!NOTE]
+> O OpenHands (anteriormente OpenDevin) é o principal projeto open-source de engenheiros de software de IA autônomos, contando com mais de **70.000 stars no GitHub**, ecossistema corporativo com o **Agent Control Plane**, suporte a Kubernetes/KVM e oferta gerenciada OpenHands Cloud.
 
-## Principais Funcionalidades / Como Funciona
-- **Autonomia Completa do Ciclo de Software:** O agente busca problemas ou aceita pedidos via interface, constrói planos formais, roda *scripts* de validação em terminal e reinicia processos após falhas (auto-cura).
-- **Abordagem de Contêiner Seguro (Sandboxing):** Opera as alterações em um repositório isolado via Docker, podendo quebrar dependências do sistema global temporário sem impacto à máquina base do desenvolvedor ou prod.
-- **Navegador Embutido:** Suporta visualização da Internet para leitura contínua de documentações de *frameworks* novos ou iteração visual (teste de botões e links de UI).
+## Visão Geral
+O **OpenHands** (mantido pela **All-Hands-AI**) é uma plataforma aberta para a criação e execução de agentes autônomos de engenharia de software. Capaz de atuar como um desenvolvedor parceiro ou individual, o agente navega autonomamente por repositórios, elabora planos formais, escreve código, executa compilações e testes em terminais isolados e resolve falhas de ponta a ponta.
+
+## Principais Funcionalidades e Novidades (2025–2026)
+- **Agent Control Plane (Plano de Controle Empresarial):**
+  - Camada de gerenciamento centralizado para orquestrar frotas inteiras de agentes de software simultaneamente, com telemetria unificada, métricas de resolução e auditoria descrita como "o Kubernetes para agentes de IA".
+- **Planning Mode Estruturado:**
+  - O agente mapeia dependências e cria um arquivo de especificação estruturado (`PLAN.md`) antes de tocar no código-fonte, submetendo o plano à revisão humana para validação do escopo e arquitetura.
+- **Aceleração com KVM e Sandboxing Isolado:**
+  - **KVM Acceleration (`SANDBOX_KVM_ENABLED`):** Ambientes de execução de sandbox acelerados por virtualização KVM direta, reduzindo tempos de compilação e teste em comparação a containers emulados tradicionais.
+  - **Isolamento Robusto:** Suporte nativo a Docker e clusters **Kubernetes**, garantindo segurança absoluta contra códigos maliciosos ou dependências corrompidas.
+- **Navegação Web e Visual Inspection:**
+  - Instanciação de navegadores virtuais para pesquisar documentações técnicas, consultar APIs externas e validar visualmente interfaces frontend construídas pelo agente.
+- **Interface Gráfica e Usabilidade:**
+  - Menu de comandos rápidos (*Slash Menu* `/`) na interface web para acionamento imediato de skills e ferramentas.
+  - Suporte tanto a instâncias locais autogerenciadas (*Self-Hosted*) quanto ao serviço totalmente gerenciado **OpenHands Cloud (SaaS)**.
 
 ## Pontos Fortes e Limitações
 ### Pontos Fortes
-- **Segurança de Execução Total:** Executar códigos ou *libraries* maliciosas (hallucinated packages) geradas por IA fica irrelevante pelo robusto isolamento de contêineres Docker.
-- **Suporte Nativo Imenso:** Roteia *prompts* entre dezenas de provedores de API, permitindo comparar resultados localmente ou pela nuvem facilmente.
+- **Totalmente Agnóstico e Sem Lock-in:** Suporte irrestrito aos principais modelos do mercado (Claude Sonnet/Opus, GPT-4o/o3, Gemini, DeepSeek e modelos locais via Ollama/vLLM).
+- **Transparência e Auditabilidade:** Código 100% open-source sob licença permissiva MIT.
+- **Prontidão Enterprise:** Arquitetura desenhada para execução em nuvem e clusters corporativos.
 
 ### Limitações
-- O loop de "tentativa-e-erro" (quando o agente erra o build muitas vezes) pode drenar o orçamento via consumo altíssimo de Tokens.
-- *Workspace* mapeados e uso de contêineres podem consumir recursos vastos da memória e CPU local.
+- **Consumo de Hardware e Tokens:** Ambientes complexos com múltiplos ciclos de tentativa-e-erro em compilações pesadas demandam alto uso computacional e de tokens.
+- **Configuração de Sandbox:** Setup inicial com Docker ou Kubernetes pode exigir esforço de infraestrutura em ambientes corporativos com restrições severas de rede.
 
 ## Casos de Uso
-- Integração profunda com provedores Git (GitHub/GitLab) para fechar *Issues* autônomas durante os *sprints*.
-- Extração lógica, documentação autogerada e refatoração agressiva de legados com garantia isolada.
-- Prototipagem ultra-rápida e scripts ponta a ponta independentes.
+- Resolução autônoma de *issues* e bugs no GitHub/GitLab com submissão direta de Pull Requests prontos.
+- Modernização, migração de frameworks e refatoração de bases de código legadas em grande escala.
+- Prototipagem acelerada de microsserviços e aplicações web completas.
+- Operações de engenharia gerenciadas em larga escala via Agent Control Plane.
 
 ## Status, Preço e Licenciamento
-- **Modelo:** Open-Source (Licença MIT).
-- **Preço:** Gratuito; porém necessita uso intensivo de LLMs pagos externos.
-- **Agnóstico de Provedor:** Sim.
+- **Modelo:** Open-Source (Licença MIT) e versão gerenciada (OpenHands Cloud).
+- **Preço:** Gratuito em modo Self-Hosted (o usuário provê chaves de API ou modelos locais); planos sob demanda no OpenHands Cloud.
+- **Agnóstico de Provedor:** Sim (100% agnóstico).
 
 ## Links Úteis
-- **Repositório Oficial (GitHub):** [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
 - **Site Oficial:** [https://www.all-hands.dev/](https://www.all-hands.dev/)
+- **Repositório Oficial (GitHub):** [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
+- **OpenHands Cloud:** [https://openhands.dev/](https://openhands.dev/)

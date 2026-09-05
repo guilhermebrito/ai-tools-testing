@@ -1,43 +1,43 @@
-# AI Engineer Coach
+# AI Engineer Coach (Microsoft)
 
 > [!NOTE]
-> Uma ferramenta focada em observabilidade e melhoria contínua para engenheiros de software utilizando assistentes de IA (AI coding assistants).
+> O AI Engineer Coach é uma ferramenta de **observabilidade local e engenharia reversa de hábitos**, desenvolvida pela Microsoft para transformar logs brutos de assistentes de IA em diagnósticos acionáveis, métricas de produtividade e detecção de anti-padrões com privacidade estrita (100% offline).
 
 ## Visão Geral
-O **AI Engineer Coach** é uma extensão desenvolvida pela **Microsoft** para VS Code que analisa localmente os logs de sessão do seu assistente de IA para transformar seu uso em insights acionáveis, garantindo que nenhum dado saia da sua máquina.
+O **AI Engineer Coach** é uma extensão open-source para Visual Studio Code (v1.115+) criada pela equipe de engenharia da **Microsoft**. Ela atua como um treinador analítico contínuo para desenvolvedores que utilizam assistentes de código e agentes de IA (como GitHub Copilot, Claude Code, Cursor, entre outros), interpretando os logs locais das sessões de trabalho para apontar melhorias de engenharia de prompt, higiene de contexto e qualidade de revisão.
 
----
+## Principais Funcionalidades e Novidades (2025–2026)
+- **Detecção Contínua de Anti-Padrões (+45 Regras):**
+  - Mapeia vícios e erros metodológicos em cinco pilares fundamentais: qualidade de prompt, higiene de sessão (sessões longas demais ou sem foco), rigor de revisão humana de código, domínio de ferramentas (tool calling) e gestão de contexto.
+- **Painel Analítico de Produtividade e Métricas Agentic:**
+  - Métricas práticas de score de adoção, mapas de calor diários e gráficos de evolução semanal de volume de código gerado vs. código modificado manualmente.
+  - Segmentação detalhada por linguagem de programação, workspace, modelo de IA e plataforma/harness utilizado.
+- **Skill Discovery (Descoberta Automática de Skills):**
+  - Algoritmo de clustering que identifica padrões repetitivos de instruções e prompts no histórico e sugere sua automação como "skills" ou templates reutilizáveis.
+- **Auditoria de Prontidão de Contexto (Context Health):**
+  - Varredura de integridade de arquivos de instrução de agentes (`.cursorrules`, `CLAUDE.md`, `.gemini/rules`), alertando sobre regras conflitantes, instruções prolixas e mapas de contexto desatualizados.
+- **Privacidade Local Absoluta (Offline First):**
+  - Todo o processamento estatístico e parsing de logs ocorre exclusivamente na máquina do desenvolvedor; nenhum dado de telemetria, código-fonte ou transcrição de chat é enviado para servidores externos.
 
-## Funcionalidades e Recursos
+## Pontos Fortes e Limitações
+### Pontos Fortes
+- **Privacidade Total:** Inviolabilidade de código e conformidade de dados para ambientes corporativos ultrarestritos.
+- **Transparência e Melhoria Contínua:** Permite que desenvolvedores meçam empiricamente seu ganho de produtividade com IA, em vez de depender de percepções subjetivas.
+- **Independência de Provedor:** Analisa múltiplos assistentes sem fidelidade forçada a um único ecossistema.
 
-*   **Acompanhamento de Progresso:** Pontuações práticas, tendências semanais e gráficos de atividade diária.
-*   **Detecção de Anti-Padrões:** Avaliação contínua baseada em mais de 45 regras que cobrem qualidade de prompt, higiene de sessão, revisão de código, domínio de ferramentas e gerenciamento de contexto.
-*   **Medição de Saída (Output):** Volume de código gerado por IA segmentado por linguagem, workspace, modelo e plataforma/harness.
-*   **Descoberta de Skills (Skill Discovery):** Encontra prompts repetidos e os transforma em "skills" reutilizáveis.
-*   **Saúde do Contexto:** Checagens de prontidão agentic, auditorias de arquivos de instrução e mapas de contexto do workspace.
-
----
-
-## Privacidade e Segurança
-*   Todo o processamento e análise dos logs ocorrem estritamente na máquina local do usuário.
-*   Nenhum dado, log de sessão ou código é enviado para nuvem ou servidores externos, garantindo privacidade total.
-
----
+### Limitações
+- **Restrito ao VS Code:** Atualmente disponível exclusivamente como extensão da interface VS Code (v1.115+).
+- **Dependência de Formato de Logs:** A precisão das análises depende da persistência e consistência dos logs gerados pelos assistentes instalados.
 
 ## Casos de Uso
-*   Melhorar técnicas de *prompt engineering* no dia a dia.
-*   Identificar dependência excessiva de IA e aprimorar a qualidade da revisão do código gerado.
-*   Times e indivíduos buscando estabelecer métricas claras e metas de melhoria contínua na adoção de ferramentas agentic.
-*   Converter tarefas repetitivas em rotinas (skills) padronizadas.
+- Auditoria pessoal para identificar dependência cega (*blind acceptance*) de código de IA e reforçar a revisão humana.
+- Padronização de boas práticas e métricas de maturidade agentic em equipes de engenharia de software.
+- Diagnóstico de bloated context e otimização de arquivos de regras para agentes de IA.
 
----
-
-## Acesso e Instalação
-*   **Plataforma:** Extensão para o VS Code (versão 1.115+).
-*   **Licença:** Gratuito e Open Source (MIT License).
-*   **Instalação:** Pode ser baixado através da página de Releases do repositório no GitHub (`.vsix`) ou construído via Dev Container.
-
----
+## Status, Preço e Licenciamento
+- **Modelo:** Open-Source (Licença MIT, mantido pela Microsoft).
+- **Preço:** Totalmente gratuito.
+- **Agnóstico de Provedor:** Sim (analisa múltiplos assistentes locais).
 
 ## Links Úteis
-*   **Repositório Oficial:** [https://github.com/microsoft/AI-Engineering-Coach](https://github.com/microsoft/AI-Engineering-Coach)
+- **Repositório Oficial (GitHub):** [https://github.com/microsoft/AI-Engineering-Coach](https://github.com/microsoft/AI-Engineering-Coach)

@@ -1,30 +1,45 @@
 # CrewAI
 
-## Visão Geral
-CrewAI é um aclamado *framework* open-source construído puramente em Python para estruturar, orquestrar e gerenciar "times" (*crews*) inteiros de agentes autônomos de Inteligência Artificial. Ele subverte o padrão de "um agente mestre" ao forçar a colaboração sistêmica especializada e distribuída.
+> [!NOTE]
+> O CrewAI expandiu de um framework de times autônomos para uma **plataforma enterprise completa de orquestração agentic**, unindo a colaboração dinâmica das Crews, a previsibilidade determinística dos Flows e o plano de governança CrewAI AMP.
 
-## Principais Funcionalidades / Como Funciona
-- **Design Baseado em Papéis (Role-Based AI):** Você atribui perfis e *backstories* focados a cada agente. Ex: um se torna o 'Engenheiro Sênior de Backend', o outro o 'Especialista em Testes Unitários' e outro o 'QA'.
-- **Automação Multi-Step Colaborativa:** O framework encadeia a lógica forçando agentes a criticarem, revisarem ou agregarem valor à resposta técnica de seus "colegas" antes da aprovação da tarefa.
-- **Interoperabilidade com Ecossistema Moderno:** Devido à forte união com as ferramentas de *tooling* do LangChain, todos os agentes podem interagir com SQL, Git local e web search integradamente.
+## Visão Geral
+O **CrewAI** é um dos frameworks mais populares em Python para modelagem, orquestração e execução de sistemas multi-agente de Inteligência Artificial. A plataforma evoluiu para suportar fluxos de trabalho híbridos de produção, combinando a flexibilidade colaborativa de agentes com a robustez e determinismo de pipelines baseados em eventos (*Flows*), além de uma camada corporativa para controle e observabilidade (*AMP*).
+
+## Principais Funcionalidades e Novidades (2025–2026)
+- **Dualidade Crews + Flows:**
+  - **Crews (Colaboração Autônoma):** Times de agentes com papéis (*roles*), metas (*goals*) e históricos (*backstories*) bem definidos que colaboram, delegam subtarefas e revisam o trabalho mútuo de maneira autônoma.
+  - **Flows (Orquestração Event-Driven):** Controle de fluxo determinístico com ramificações, condicionais e loops explícitos. Permite gerenciar estados persistentes entre etapas e retomar execuções longas sem perder progresso.
+- **CrewAI AMP (Agent Management Platform):**
+  - Plataforma de controle de nível empresarial para governança centralizada, gerenciamento de permissões (*RBAC*), logs de auditoria e monitoramento de desempenho em múltiplos departamentos.
+  - **Tracing & Observabilidade:** Rastreamento ponta a ponta de chamadas de ferramentas, latência, custos de inferência e árvores de decisão dos agentes.
+  - **Resiliência e Checkpointing:** Gravação de estados intermediários e recuperação automática de falhas em processos críticos.
+- **Integração Nativa com MCP (Model Context Protocol):**
+  - Conexão simplificada com ferramentas externas, servidores locais de banco de dados e APIs via protocolo padronizado MCP, sem necessidade de adapters manuais.
+- **Comunicação Agent-to-Agent (A2A):**
+  - Protocolo padronizado para troca de mensagens e metadados estruturados entre agentes locais ou distribuídos em diferentes instâncias.
+- **Alocação Heterogênea de Modelos:**
+  - Atribuição independente de LLMs por papel: agentes analistas e arquitetos utilizam modelos topo de linha (Claude 3.7 Sonnet, GPT-4o), enquanto tarefas rotineiras de formatação ou parsing rodam em modelos rápidos e locais (Llama, Mistral).
 
 ## Pontos Fortes e Limitações
 ### Pontos Fortes
-- **Diminuição Severa de Alucinações (Hallucinations):** Erros críticos e lógicos gerados pelo Agente Programador tendem a ser barrados imediatamente pelos Agentes de Revisão do *Crew*, simulando revisões de PR (Pull Request).
-- **Customização Financeira Inteligente:** Permite atribuir LLMs distintos para agentes distintos num mesmo *workflow*. (Ex: O arquiteto usa GPT-4o, os testadores de script rodam no LLama3-8b sem custos locais).
+- **Equilíbrio entre Autonomia e Controle:** A combinação de Crews com Flows resolve o desafio de previsibilidade em pipelines de produção.
+- **Ecossistema e Adoção Enterprise:** A suite AMP fornece recursos fundamentais para conformidade corporativa e segurança da informação.
+- **Totalmente Agnóstico de Modelos:** Compatível com praticamente qualquer API ou servidor local (vLLM, Ollama) via LangChain e LiteLLM.
 
 ### Limitações
-- Latência inerente. Diálogos complexos entre 4 agentes podem levar vários minutos para convergir a um resultado final simples.
-- Dependência contínua de linguagens estritas de orquestração Python e curva técnica acentuada de infraestrutura.
+- **Curva de Latência:** Workflows multi-agente complexos com múltiplas rodadas de debate e revisão mútua podem requerer tempo de resposta considerável.
+- **Complexidade Operacional:** Deploy enterprise com o AMP exige infraestrutura adicional de observabilidade e banco de dados.
 
 ## Casos de Uso
-- Implementações seguras na arquitetura corporativa em que IAs desenvolvem, validam e aprovam ciclos de dados independentemente.
-- Automação profunda e processamento analítico com revisão e re-revisão constante antes da formatação.
+- Pipelines de desenvolvimento de software onde agentes desenvolvem, testam e realizam code review em cadeia.
+- Automação de processos empresariais complexos (análise financeira, conformidade jurídica e pesquisa de mercado).
+- Extração, enriquecimento e estruturação de dados em larga escala com pipelines event-driven.
 
 ## Status, Preço e Licenciamento
-- **Modelo:** Open-Source (Licença MIT).
-- **Preço:** O software é gratuito, e custos agregados ocorrem de forma pulverizada via a escolha dos LLMs acoplados. O time também oferece soluções Enterprise pagas de gerência.
-- **Agnóstico de Provedor:** Sim. Possui compatibilidade extensa.
+- **Modelo:** Open-Source (Licença MIT) para o framework core; oferta comercial para o CrewAI Enterprise/AMP.
+- **Preço:** Framework gratuito; custos atrelados a consumo de tokens de LLM e licenciamento comercial da plataforma AMP.
+- **Agnóstico de Provedor:** Sim (100% agnóstico).
 
 ## Links Úteis
 - **Site Oficial / Documentação:** [https://www.crewai.com/](https://www.crewai.com/)

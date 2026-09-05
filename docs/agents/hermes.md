@@ -1,32 +1,51 @@
 # Hermes (Nous Research)
 
-## Visão Geral
-Hermes é um agente de Inteligência Artificial open-source concebido pela Nous Research. Seu diferencial marcante é a sua atuação como um assistente pessoal altamente customizável e persistente, projetado especialmente para automatizar fluxos de trabalho locais de desenvolvedores de software e operadores de infraestrutura.
+> [!NOTE]
+> O Hermes destaca-se como um **agente auto-evolutivo**: ele sintetiza fluxos bem-sucedidos em "Skills" em Markdown e as refina autonomamente via DSPy e otimização evolutiva (GEPA), tornando-se mais rápido e preciso a cada execução.
 
-## Principais Funcionalidades / Como Funciona
-- **Sistema de "Skills" (Auto-aperfeiçoamento):** O Hermes pode abstrair fluxos de sucesso que ele executa, convertendo-os e salvando-os em novos documentos Markdown ("Skills"). No futuro, ele aplica essas Skills para tarefas similares de forma automatizada e barata.
-- **Orquestrador CLI:** Opera nativamente no terminal e orquestra execuções de sistema, cria e manipula arquivos locais e dispara scripts Python.
-- **Integrações Multicanal:** Suporta conexões de entrada de dados (Gateways) para Telegram, Slack, E-mail e Discord, permitindo, por exemplo, o envio de um comando por voz no Telegram.
+## Visão Geral
+O **Hermes** (desenvolvido pela **Nous Research**, pacote `hermes-agent`) é um agente autônomo open-source concebido como um assistente pessoal persistente voltado a desenvolvedores e operadores de infraestrutura. Operando nativamente no terminal e integrável a múltiplos canais de mensageria, o Hermes combina execução local de comandos com um loop contínuo de aprendizado, auto-geração de skills e exportação de trajetórias para fine-tuning.
+
+## Principais Funcionalidades e Novidades (2025–2026)
+- **Sistema de Skills e Aprendizado Auto-Evolutivo:**
+  - **Criação e Refinamento de Skills:** Converte resoluções bem-sucedidas em arquivos estruturados em `~/.hermes/skills/`, consultando-os para acelerar problemas futuros.
+  - **90+ Skills Pré-instaladas:** Pacote bundled abrangendo MLOps (`dspy`, `serving-llms-vllm`, `weights-and-biases`), automação de código (`github-pr-workflow`, `github-code-review`) e produtividade.
+  - **Auto-Evolução com DSPy e GEPA:** Mecanismo experimental que utiliza algoritmos genéticos e compilação de prompts para reescrever e otimizar as próprias skills a partir de traces de execução.
+  - **Hub Comunitário:** Download e compartilhamento de skills via `agentskills.io`.
+- **Orquestração Multi-Agente via Kanban Durável:**
+  - Sistema de delegação de tarefas estilo Kanban com monitoramento de batimentos cardíacos (*heartbeats*), detecção de tarefas travadas e re-tentativas automáticas contra alucinações.
+- **Automação de Computador e Navegador (Computer Use):**
+  - Driver universal de Computer Use compatível com múltiplos provedores de visão para capturas de tela e interação com interfaces de desktop.
+  - Automação completa de browser via Playwright/Chromium para extração de dados e auditoria de aplicações web.
+- **MLOps e Geração de Dados de Treinamento:**
+  - **Batch Processing:** Geração de milhares de trajetórias de chamadas de ferramentas em lote com checkpoints persistentes.
+  - **Exportação de Trajetórias:** Exportação nativa em formatos compatíveis com ShareGPT para fine-tuning e integração com frameworks de Reinforcement Learning (ex: Atropos).
+- **Gateway Multicanal Unificado:**
+  - Suporte simultâneo a mais de 5 plataformas (Telegram, Slack, Discord, WhatsApp e Signal) em um único processo gateway, com suporte móvel (Android via Termux) e agendador cron integrado.
+- **Performance e Hot-path:**
+  - Loop de execução do agente 47% mais veloz a partir da v0.14/v0.15, inicialização instantânea via `uv` e diagnósticos LSP integrados em tempo real.
 
 ## Pontos Fortes e Limitações
 ### Pontos Fortes
-- **Privacidade Excepcional e Self-Hosting:** Pode rodar em redes isoladas sem vazamento de código fonte corporativo.
-- **Capacidade Evolutiva:** Devido à biblioteca de *Skills*, o agente ganha "experiência de projeto" progressivamente, não começando do zero a cada execução.
+- **Auto-Aperfeiçoamento Contínuo:** Acúmulo progressivo de conhecimento prático por meio do ecossistema de skills.
+- **Privacidade e Self-Hosting:** Capacidade de operar de forma 100% privada com modelos locais (vLLM, Ollama) ou via OpenRouter.
+- **Multicanalidade Extrema:** Acesso e controle de fluxos de engenharia diretamente pelo smartphone via mensageiros.
 
 ### Limitações
-- Configuração inicial e arquitetura possuem viés altamente técnico (não *plug-and-play*).
-- Menos adaptado a gerar interfaces *front-end* e layouts comparado ao *Cursor* ou *Google Antigravity*.
+- **Configuração Técnica:** Demanda maior familiaridade com terminal, variáveis de ambiente e gerenciamento de modelos.
+- **Foco Primário em Backend/DevOps:** Menos direcionado a preview visual interativo de UI comparado a IDEs dedicadas.
 
 ## Casos de Uso
-- Operação permanente em VPS privadas ou *home-servers* para administração remota (DevOps).
-- Delegação de tarefas demoradas via chat de celular (ex: acionar um *redeploy* de infraestrutura longa no trânsito).
-- Automação de pipelines pesados de CI/CD não enquadrados nas limitações do GitHub Actions convencionais.
+- Administração remota de servidores e automação de operações de infraestrutura via bots de mensageria.
+- Geração de datasets sintéticos de trajetórias de agentes para pipelines de fine-tuning e RL.
+- Execução de tarefas longas de desenvolvimento com supervisão assíncrona no Kanban durável.
 
 ## Status, Preço e Licenciamento
-- **Modelo:** Open-Source.
-- **Preço:** Gratuito (O usuário fornece sua própria infraestrutura e chaves de API/Ollama).
-- **Agnóstico de Provedor:** Sim.
+- **Modelo:** Open-Source (Nous Research).
+- **Preço:** Gratuito (código aberto). Usuário fornece infraestrutura própria e chaves de API/modelos locais.
+- **Agnóstico de Provedor:** Sim (suporta OpenRouter, OpenAI, Anthropic, Google, vLLM e Ollama).
 
 ## Links Úteis
-- **Nous Research:** [https://nousresearch.com/](https://nousresearch.com/)
-- **Repositório Oficial (GitHub):** [https://github.com/NousResearch/Hermes](https://github.com/NousResearch/Hermes)
+- **Site Oficial:** [https://nousresearch.com/](https://nousresearch.com/)
+- **Repositório Oficial (GitHub):** [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
+- **Hub de Skills:** [https://agentskills.io/](https://agentskills.io/)

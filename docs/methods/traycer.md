@@ -1,32 +1,42 @@
 # Traycer AI
 
-## Visão Geral
-Traycer AI é uma ferramenta focada em trazer o desenvolvimento **spec-first** (orientado a especificações) para os fluxos de trabalho de codificação com Inteligência Artificial. Ele atua como uma camada de orquestração, planejamento e verificação que se posiciona entre o desenvolvedor e os agentes de IA (como Cursor, Claude Code, Windsurf, entre outros).
+> [!NOTE]
+> O Traycer AI funciona como a **camada de governança e orquestração spec-first**: em vez de substituir seus agentes favoritos (Cursor, Claude Code, Windsurf), ele atua a montante definindo especificações formais, controlando o handoff e verificando a integridade das alterações antes da fusão.
 
-## Principais Funcionalidades / Como Funciona
-- **Combate ao "Vibe Coding":** Exige a definição clara de intenções, escopo e restrições antes da geração de código, garantindo que o código gerado tenha contexto e consistência arquitetural.
-- **Planejamento Estruturado:** Quebra intenções de alto nível em fases acionáveis e planos detalhados que podem ser revisados e refinados.
-- **Execução e Handoff:** Permite delegar a execução do plano para os agentes de codificação preferidos pelo desenvolvedor, mantendo o controle do contexto.
-- **Verificação Automática:** Inclui sistemas que revisam as mudanças geradas comparando-as com os requisitos originais, capturando erros ou desvios antes de ir para produção.
+## Visão Geral
+O **Traycer AI** é uma plataforma desenhada para transformar a engenharia de software assistida por IA através da abordagem **spec-first** (especificação em primeiro lugar). Posicionando-se entre o desenvolvedor humano e os agentes autônomos de código, o Traycer substitui o improviso do *vibe coding* por contratos arquiteturais explícitos, garantindo rastreabilidade contínua e consistência mesmo em bases de código legadas e de alta complexidade.
+
+## Principais Funcionalidades e Novidades (2025–2026)
+- **Engenharia Spec-First contra Vibe Coding:**
+  - Exige a definição formal de objetivos, restrições e casos de borda antes de qualquer modificação de código, sintetizando especificações acionáveis que servem de guia rígido para os agentes.
+- **Decomposição em Fases e Milestones:**
+  - Quebra requisitos de alto nível em etapas sequenciais com dependências claras, permitindo revisão granular e intervenções humanas sem reiniciar todo o contexto.
+- **Handoff Inteligente para Agentes de Execução:**
+  - Delega a execução prática das fases para os agentes de codificação preferidos pelo time (**Cursor**, **Claude Code**, **Windsurf**, **Google Antigravity**), injetando apenas o subconjunto de contexto relevante para cada micro-tarefa.
+- **Motor de Verificação Automática (Closed-Loop Verification):**
+  - Analisa as modificações de código submetidas pelos agentes contra as especificações originais e suítes de teste, detectando alucinações, vazamentos de escopo ou regressões antes da abertura de Pull Requests.
+- **Preservação e Durabilidade da Intenção:**
+  - Mantém a árvore de decisões arquiteturais e o raciocínio por trás de cada mudança persistidos no repositório, garantindo que sessões futuras de IA ou novos engenheiros compreendam o histórico do projeto.
 
 ## Pontos Fortes e Limitações
 ### Pontos Fortes
-- **Rastreabilidade e Durabilidade:** Preserva a "intenção" do trabalho, permitindo rastrear decisões arquiteturais ao longo de todo o ciclo de vida do software.
-- **Integração com Agentes Existentes:** Não substitui, mas aprimora ferramentas como Cursor ou Claude Code ao orquestrá-las através de um workspace unificado.
-- **Garantia de Qualidade:** Mitiga problemas de arquitetura falha gerados por execuções de IA muito aceleradas e sem supervisão.
+- **Aderência Arquitetural Rigorosa:** Garante que agentes executem exatamente o que foi planejado, prevenindo mutações descontroladas no design do software.
+- **Compatibilidade Aditiva:** Não exige abandono das ferramentas que os desenvolvedores já dominam; potencializa Cursor e Claude Code com governança upstream.
+- **Redução Drástica de Retrabalho:** A verificação automática barra alterações defeituosas no início do ciclo de revisão.
 
 ### Limitações
-- Requer uma mudança de paradigma, forçando o desenvolvedor a investir tempo escrevendo especificações detalhadas (upstream decision-making) ao invés de apenas pedir código diretamente.
-- Adiciona uma etapa extra no ecossistema de desenvolvimento, podendo ser considerado excessivo para pequenos projetos de prototipagem rápida.
+- **Cultura e Disciplina:** Demanda mudança cultural de desenvolvedores habituados a pedir código imediato sem planejamento formal.
+- **Etapa Adicional no Ciclo:** Pode adicionar fricção temporária para scripts pontuais ou alterações cosméticas triviais.
 
 ## Casos de Uso
-- Projetos complexos de larga escala onde a consistência arquitetural, segurança e rastreabilidade são fundamentais.
-- Equipes que desejam escalar a codificação assistida por IA sem perder o rigor e o planejamento da engenharia de software tradicional.
-- Coordenação eficiente de múltiplos agentes compartilhando um contexto comum para garantir que nada se perca no processo.
+- Arquiteturas corporativas complexas com requisitos severos de auditoria, conformidade e manutenibilidade.
+- Orquestração coordenada de múltiplos desenvolvedores e agentes trabalhando em módulos interdependentes.
+- Grandes migrações de stack e refatorações de sistemas críticos de negócio.
 
 ## Status, Preço e Licenciamento
-- **Modelo:** Plataforma/Camada de Orquestração e Planejamento.
-- **Agnóstico de Provedor/Agente:** Sim. Funciona como um orquestrador que senta "por cima" de agentes como Cursor, Claude Code, etc.
+- **Modelo:** Plataforma comercial / Camada de Orquestração Spec-First.
+- **Preço:** Planos gratuitos para desenvolvedores individuais e tiers pagos para times e empresas com suporte a workspaces colaborativos.
+- **Agnóstico de Provedor/Agente:** Sim (100% agnóstico de ferramentas de código e provedores de LLM).
 
 ## Links Úteis
 - **Site Oficial:** [https://traycer.ai/](https://traycer.ai/)

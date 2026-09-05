@@ -53,23 +53,23 @@ Ferramentas focadas em monitorar, analisar e melhorar o uso de assistentes de IA
 
 ## Mudanças e Evoluções das Ferramentas (2025–2026)
 
-A tabela abaixo resume as principais evoluções que cada ferramenta passou desde seu lançamento até maio de 2026:
+A tabela abaixo resume as principais evoluções e novidades que cada ferramenta incorporou ao longo de 2025–2026:
 
-| Ferramenta | Estado Inicial | Estado Atual (Maio 2026) | Principais Mudanças |
+| Ferramenta | Estado Inicial | Estado Atual (2026) | Principais Mudanças |
 | :--- | :--- | :--- | :--- |
-| **Claude Code** | CLI puro com Claude 3.7 Sonnet | Plataforma multi-superfície (CLI + IDE + Agent View) | Extensões VS Code/JetBrains, Goal Mode, Routines, Plugins, Agent SDK, Remote Control, 1M tokens |
-| **Cursor** | IDE com autocompletar e Composer | Plataforma de agentes assíncronos (v3.5) | Background Agents na nuvem, BugBot, Automations multi-repo, Jira integration, Composer 2.5 |
-| **OpenAI Codex** | Tradutor de linguagem natural → bash | Plataforma agentic (CLI + Desktop App) com GPT-5.5 | Goal Mode, Computer Use, Codex Security, Plugins (Sentry/Datadog), MCP, Appshots |
-| **Open Codex** | Fork do Codex CLI | Fork comunitário leve e estável | Mantém foco em agnósticismo de provedor e execução local segura (Ollama) |
-| **Google Antigravity** | IDE agent-first (nov/2025) | Antigravity 2.0: App Standalone + CLI + SDK | App desktop independente, Agent Manager (Mission Control), subagentes dinâmicos, Scheduled Tasks, JSON Hooks |
-| **Paperclip** | Orquestrador de agentes BYOA | Plataforma empresa de IA (lançada mar/2026) | Org-chart, heartbeats, approval workflows, MCP server, cheaper model profiles |
-| **Hermes** | Agente CLI com Skills | Agente auto-evolutivo com Kanban multi-agente | Skills auto-evolutivas (DSPy/GEPA), Computer Use, 20+ plataformas de mensageria, agent loop 47% mais rápido |
-| **OpenHands** | Agente autônomo em Docker (OpenDevin) | Plataforma enterprise (70k+ ⭐, $23.8M funding) | Agent Control Plane, Planning Mode, KVM sandbox, Kubernetes, OpenHands Cloud SaaS |
-| **BMAD** | Metodologia de papéis + Markdown | Framework v6.x com 3 camadas (Core/Method/Builder) | Scale-adaptive intelligence, cross-platform (Cursor/Claude/Antigravity), BMad Builder |
-| **Pi** | Toolkit CLI `@mariozechner` | Pi v0.74+ sob `@earendil-works` | Migração de namespace, OpenRouter routing, image generation, Together AI, hooks avançados |
-| **CrewAI** | Framework Python para Crews | Plataforma enterprise com Crews + Flows + AMP | Flows event-driven, AMP (Control Plane, RBAC, tracing), MCP, A2A communication |
-| **AI Engineer Coach** | - | Lançamento open-source | Ferramenta de observabilidade local para VS Code com detecção de 45+ anti-padrões e métricas agentic. |
-| **Traycer AI** | - | Lançamento recente | Plataforma spec-first que atua como orquestrador e verificador entre o desenvolvedor e agentes de IA. |
+| **Claude Code** | CLI puro com Claude 3.7 Sonnet | Plataforma multi-superfície (CLI + IDE + Agent View) | Extensões VS Code/JetBrains, Goal Mode (`/goal`), Routines, Plugins, Agent SDK, Remote Control, janela de contexto de 1M tokens |
+| **Cursor** | IDE com autocompletar e Composer | Plataforma de agentes assíncronos (v3.5+) | Background Agents na nuvem, BugBot (revisão em PRs), Automations multi-repo e no-repo, integração Jira, Composer 2.5 |
+| **OpenAI Codex** | Tradutor de linguagem natural → bash | Plataforma agentic (CLI + Desktop App) com GPT-5.5 | Goal Mode de longa duração, Computer Use nativo, Codex Security, Appshots visuais, plugins (Sentry/Datadog), suporte a servidores MCP |
+| **Open Codex** | Fork do Codex CLI | Fork comunitário leve, open-source e modular | Foco em privacidade e zero vendor lock-in, modo Full Auto iterativo, sandboxing via Docker/Seatbelt, suporte nativo a Ollama/vLLM |
+| **Google Antigravity** | IDE agent-first (nov/2025) | Antigravity 2.0: App Standalone + IDE + CLI + SDK | Central de controle desktop desacoplada, subagentes dinâmicos paralelos, Planning Mode com artefatos, Scheduled Tasks (`/schedule`), JSON Hooks e browser agent |
+| **Paperclip** | Orquestrador de agentes BYOA | Plataforma operacional multi-agente (paperclip.ing) | Org-Chart visual de agentes com hierarquias, Heartbeat System persistente, approval workflows, servidor MCP nativo e perfis de custo por modelo |
+| **Hermes** | Agente CLI com Skills | Agente auto-evolutivo (Nous Research v0.15+) | Skills auto-evolutivas (DSPy/GEPA), 90+ skills bundled, Kanban multi-agente durável, Computer Use universal, 5+ canais de mensageria, exportação de trajetórias MLOps |
+| **OpenHands** | Agente autônomo em Docker (OpenDevin) | Engenheiro de software corporativo (70k+ ⭐, All-Hands-AI) | Agent Control Plane empresarial, Planning Mode (`PLAN.md`), aceleração de sandbox KVM, orquestração em Kubernetes, OpenHands Cloud SaaS |
+| **BMAD** | Metodologia de papéis + Markdown | Framework ágil v6.x (Core/Method/Builder) | Combate ao "vibe coding" via artefatos Markdown, workflows por personas especializadas, Scale-Adaptive Intelligence (Quick/Standard/Enterprise) e suporte cross-platform |
+| **Pi** | Toolkit CLI `@mariozechner` | Toolkit TUI e CLI sob `@earendil-works` (v0.74+) | Migração de namespace para `@earendil-works`, TUI interativa avançada, roteamento via `models.json` (OpenRouter/Together AI), geração de imagens e session branching |
+| **CrewAI** | Framework Python para Crews | Plataforma enterprise Crews + Flows + AMP | Dualidade Crews colaborativas e Flows event-driven, Agent Management Platform (AMP) com RBAC e tracing, integração MCP nativa e protocolo A2A |
+| **Traycer AI** | - | Camada de orquestração e governança spec-first | Especificações formais pré-código contra vibe coding, handoff inteligente para Cursor/Claude Code/Windsurf, motor de verificação fechada e persistência de intenção |
+| **AI Engineer Coach** | - | Extensão de observabilidade e coaching local (Microsoft) | Análise local e privada de logs no VS Code, detecção contínua de mais de 45 anti-padrões, telemetria agentic de código, Skill Discovery e auditoria de contexto |
 
 ---
 
