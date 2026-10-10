@@ -1,12 +1,17 @@
 # Claude Code
 
 > [!NOTE]
-> O Claude Code evoluiu de um assistente CLI puramente de terminal para uma **plataforma agentic multi-superfície completa**, com suporte nativo a IDEs (VS Code e JetBrains), Agent View centralizado, sistema de plugins e orquestração autônoma via Goal Mode.
+> O Claude Code evoluiu de um assistente CLI puramente de terminal para uma **plataforma agentic multi-superfície completa**, com suporte nativo a IDEs (VS Code e JetBrains), Agent View centralizado, sistema de plugins e orquestração autônoma via Goal Mode. Com a introdução do **Claude 4.5 Sonnet** como modelo padrão, suporte multi-modelo via OpenRouter, integração oficial com GitHub Actions e o novo plano Claude Max, a ferramenta combina raciocínio estendido (*extended thinking*) de ponta com alta flexibilidade para fluxos profissionais e CI/CD.
 
 ## Visão Geral
-O **Claude Code** é a ferramenta agentic oficial de desenvolvimento de software da **Anthropic**, projetada para atuar como um engenheiro parceiro diretamente no fluxo do desenvolvedor. Alimentada pelos modelos de ponta da família Claude (incluindo Claude 3.7 Sonnet, Claude Sonnet 4 e Opus com Fast Mode), a ferramenta suporta contextos de até **1 milhão de tokens** e opera tanto no terminal (*terminal-first*) quanto integrada em editores e painéis de múltiplos agentes.
+O **Claude Code** é a ferramenta agentic oficial de desenvolvimento de software da **Anthropic**, projetada para atuar como um engenheiro parceiro diretamente no fluxo do desenvolvedor. Alimentada pelos modelos de ponta da família Claude — tendo o **Claude 4.5 Sonnet** (lançado em setembro de 2026) como modelo padrão, com capacidades aprofundadas de raciocínio estendido (*extended thinking*) e performance superior em código, além de Claude 3.7 Sonnet, Claude Sonnet 4 e Opus com Fast Mode —, a ferramenta suporta contextos de até **1 milhão de tokens** e conta com melhorias contínuas de latência reduzida e gerenciamento otimizado de contexto. Opera tanto no terminal (*terminal-first*) quanto integrada em editores, esteiras de CI/CD e painéis multi-agente.
 
 ## Principais Funcionalidades e Novidades (2025–2026)
+- **Claude 4.5 Sonnet como Padrão (Setembro 2026):** Modelo padrão com capacidades de *extended thinking*, oferecendo desempenho de referência na geração, refatoração profunda e depuração de código complexo.
+- **Suporte Multi-Modelo via OpenRouter:** Flexibilidade para rotear requisições para modelos de terceiros por meio da integração com o OpenRouter, permitindo o uso de modelos especializados ou alternativas open-weight.
+- **Custom Slash Commands:** Criação de comandos de barra personalizados (`/comando`) para padronizar e automatizar rotinas customizadas do desenvolvedor ou da equipe.
+- **Integração com GitHub Actions:** Ação oficial (`anthropics/claude-code-action`) para automação de CI/CD, permitindo executar revisões de código em PRs, resolver issues de forma autônoma e rodar tarefas diretamente na pipeline.
+- **Melhorias de Performance e Contexto:** Otimizações que proporcionam menor latência nas respostas e gerenciamento aprimorado de contexto em sessões longas e complexas.
 - **Interfaces Multi-Superfície:**
   - **CLI Nativo:** Opera diretamente no shell para exploração de repositórios, edição concorrente de arquivos, execução de testes e commits.
   - **Extensões IDE (VS Code & JetBrains):** Extensões nativas com visualização de diffs interativa, compartilhamento de contexto (arquivos abertos, diagnósticos de linter, erros de compilação) e atalhos rápidos (`Cmd+Esc`).
@@ -22,25 +27,34 @@ O **Claude Code** é a ferramenta agentic oficial de desenvolvimento de software
 
 ## Pontos Fortes e Limitações
 ### Pontos Fortes
-- **Raciocínio Lógico e Refatoração:** Aproveita a profundidade analítica dos modelos Claude mais recentes para resolução de problemas arquiteturais complexos.
-- **Janela de Contexto Gigante (1M Tokens):** Capacidade de analisar repositórios inteiros sem perda de contexto ou fragmentação.
-- **Flexibilidade Operacional:** Cobertura do fluxo completo — do terminal minimalista a extensões de IDE e orquestração de subagentes.
+- **Raciocínio Lógico e Refatoração:** Aproveita a profundidade analítica e o raciocínio estendido dos modelos Claude mais recentes (notadamente o Claude 4.5 Sonnet) para resolução de problemas arquiteturais complexos.
+- **Janela de Contexto Gigante (1M Tokens):** Capacidade de analisar repositórios inteiros sem perda de contexto ou fragmentação, agora com melhor gerenciamento dinâmico.
+- **Flexibilidade Operacional:** Cobertura do fluxo completo — do terminal minimalista a extensões de IDE, pipelines de CI/CD e orquestração de subagentes.
 
 ### Limitações
-- **Restrito ao Ecossistema Anthropic:** Sem suporte nativo direto a modelos de outros provedores (OpenAI, Google, open-weights).
-- **Consumo de Tokens:** Sessões longas em repositórios massivos com Goal Mode podem gerar consumo elevado de API.
+- **Ecossistema e Suporte a Terceiros:** Agora parcialmente agnóstico a modelos graças ao suporte multi-modelo via OpenRouter, embora as otimizações nativas de ferramentas e prompts continuem projetadas primariamente para os modelos Claude da Anthropic.
+- **Consumo de Tokens:** Sessões longas em repositórios massivos com Goal Mode e raciocínio estendido podem gerar consumo elevado de tokens e custos de API.
 
 ## Casos de Uso
 - Auditoria, modernização e refatoração de bases legadas com visão de contexto integral.
 - Execução autônoma de migrações e correções de bugs complexos via Goal Mode.
+- Automação de pipelines de CI/CD, triage de issues e revisão de Pull Requests via Claude Code GitHub Actions.
+- Padronização de comandos e automações repetitivas via Custom Slash Commands.
 - Automação de pipelines de desenvolvimento com Routines (preparação de PRs e relatórios técnicos).
 - Construção de fluxos customizados de agentes de software via Claude Agent SDK.
 
 ## Status, Preço e Licenciamento
 - **Modelo:** Proprietário (desenvolvido pela Anthropic).
-- **Preço:** Instalação gratuita (via `@anthropic-ai/claude-code`); requer assinatura paga Anthropic (Pro, Max, Team ou Enterprise) ou pagamento por uso via API Console Anthropic.
-- **Agnóstico de Provedor:** Não (exclusivo para modelos Claude).
+- **Preço:**
+  - Instalação gratuita via pacote CLI (`@anthropic-ai/claude-code`).
+  - Requer assinatura paga Anthropic ou faturamento por uso:
+    - **Claude Pro:** Acesso individual aos modelos avançados.
+    - **Claude Max Plan:** Novo plano com limites de uso significativamente superiores (*high-limit tiers*), projetado para desenvolvedores profissionais e fluxos intensivos.
+    - **Claude Team & Enterprise:** Planos para equipes e corporações com controles administrativos e faturamento centralizado.
+    - **Anthropic API Console:** Pagamento sob demanda pelo consumo de tokens.
+- **Agnóstico de Provedor:** Parcialmente agnóstico (suporta modelos de terceiros via integração com OpenRouter, além dos modelos nativos da Anthropic).
 
 ## Links Úteis
 - **Documentação Oficial:** [https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
 - **Pacote NPM:** [https://www.npmjs.com/package/@anthropic-ai/claude-code](https://www.npmjs.com/package/@anthropic-ai/claude-code)
+- **Claude Code GitHub Action:** [https://github.com/anthropics/claude-code-action](https://github.com/anthropics/claude-code-action)
