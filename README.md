@@ -37,6 +37,7 @@ Estruturas de trabalho, metodologias e APIs para organizar o uso de IAs.
 
 | Método / Toolkit | Descrição Principal | Agnóstico de Modelo? | Foco / Caso de Uso |
 | :--- | :--- | :---: | :--- |
+| [SDD](./docs/methods/sdd.md) | Paradigma Spec-Driven Development. | ✅ Sim | Especificação formal como fonte da verdade, mitigação de alucinações e governança de IA. |
 | [BMAD](./docs/methods/bmad.md) | Metodologia Agile AI-Driven (v6.x – v7.0). | ✅ Sim | Estruturação de papéis, personas especializadas e integração MCP. |
 | [Pi](./docs/methods/pi.md) | Toolkit CLI com TUI rica (Earendil Works v0.80+ / v1.0). | ✅ Sim | Construção de agentes customizados, split-screen e inferência rápida (Groq/Cerebras). |
 | [CrewAI](./docs/methods/crewai.md) | Framework Crews + Flows 2.0 (Marco v1.0). | ✅ Sim | Automação multi-agente assíncrona, observabilidade nativa e Marketplace de Crews. |
@@ -65,6 +66,7 @@ A tabela abaixo resume as principais evoluções e novidades que cada ferramenta
 | **Paperclip** | Orquestrador de agentes BYOA | Plataforma operacional multi-agente (paperclip.ing) | Templates de Org-Chart prontos, melhorias no servidor MCP para cross-agent communication, dashboard com métricas de custos granulares, novos adaptadores modulares |
 | **Hermes** | Agente CLI com Skills | Agente auto-evolutivo (Nous Research v0.16+) | 100+ skills (novas categorias DevOps/Cloud e Observabilidade), loop 60% mais rápido, Kanban com auto-priorização e anti-zombie, suporte Claude 4.5 e anúncio do Hermes Pro |
 | **OpenHands** | Agente autônomo em Docker (OpenDevin) | Engenheiro de software de ponta (70k+ ⭐, SWE-bench líder) | Destaque no benchmark SWE-bench, GitHub Resolver para issues e PRs automáticos, ciclo v0.40+, OpenHands Cloud SaaS e suporte a Claude 4.5 / GPT-5.5 |
+| **SDD** | Ad-hoc prompting / Vibe coding | Paradigma dominante de governança e engenharia | Consolidação do modelo spec-first contra o vibe coding, formalização de contratos de arquitetura antes da codificação, e base teórica para frameworks como BMAD e plataformas como Traycer |
 | **BMAD** | Metodologia de papéis + Markdown | Framework ágil v6.x preparando v7.0 | Anúncio do BMAD v7.0 para integração agentic nativa, novas personas especializadas (Security Engineer e Data Engineer), exploração de integração com servidores MCP |
 | **Pi** | Toolkit CLI `@mariozechner` | Toolkit TUI e CLI sob `@earendil-works` (v0.80+) | TUI com split-screen para múltiplas conversas, suporte aos endpoints rápidos da Groq e Cerebras, novos hooks de ciclo de vida (`on_session_start`/`end`), preview do Pi Studio |
 | **CrewAI** | Framework Python para Crews | Framework de produção Crews + Flows 2.0 (v1.0) | Marco oficial CrewAI v1.0, Flows 2.0 assíncrono com estados avançados, CrewAI CLI robusto, observabilidade nativa, Marketplace de Crews e 80k+ ⭐ |

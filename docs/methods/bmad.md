@@ -1,10 +1,10 @@
 # BMAD (Breakthrough Method for Agile AI-Driven Development)
 
 > [!NOTE]
-> O BMAD não é um software binário, mas sim uma **metodologia ágil open-source** que combate o "vibe coding" ao estruturar o trabalho com IA em um **time virtual de especialistas**, com papéis bem delimitados e artefatos Markdown como fonte única da verdade. Com o anúncio do **BMAD v7.0** em outubro de 2026, a metodologia avança com foco em **integração nativa com plataformas agentic modernas**, novos templates de personas (**Security Engineer** e **Data Engineer**) e exploração do protocolo **MCP**.
+> O BMAD não é um software binário, mas sim uma **metodologia ágil open-source** que combate o "vibe coding" ao operacionalizar o paradigma de **[Spec-Driven Development (SDD)](./sdd.md)** em um **time virtual de especialistas**, com papéis bem delimitados e artefatos Markdown como fonte única da verdade. Com o anúncio do **BMAD v7.0** em outubro de 2026, a metodologia avança com foco em **integração nativa com plataformas agentic modernas**, novos templates de personas (**Security Engineer** e **Data Engineer**) e exploração do protocolo **MCP**.
 
 ## Visão Geral
-O **BMAD** é um framework metodológico concebido para introduzir a disciplina da engenharia de software tradicional ao desenvolvimento orientado por Inteligência Artificial. Projetado para operar com os modelos de fronteira mais modernos do ecossistema — como **Claude 3.7 Sonnet / Claude 4**, **GPT-5 / o3** e **Gemini 2.5 Pro** —, o BMAD organiza o ciclo de vida do software através de personas ágeis e portões de validação rigorosos que previnem dívida técnica e alucinações, superando interações desestruturadas e conversas ad-hoc com assistentes generalistas.
+O **BMAD** é um framework metodológico concebido para introduzir a disciplina da engenharia de software tradicional e do **Spec-Driven Development (SDD)** ao desenvolvimento orientado por Inteligência Artificial. Projetado para operar com os modelos de fronteira mais modernos do ecossistema — como **Claude 3.7 Sonnet / Claude 4**, **GPT-5 / o3** e **Gemini 2.5 Pro** —, o BMAD organiza o ciclo de vida do software através de personas ágeis e portões de validação rigorosos que previnem dívida técnica e alucinações, superando interações desestruturadas e conversas ad-hoc com assistentes generalistas.
 
 ## Principais Funcionalidades e Novidades (2025–2026 · v6.x – v7.0)
 - **Workflow Baseado em Personas Especializadas:**
